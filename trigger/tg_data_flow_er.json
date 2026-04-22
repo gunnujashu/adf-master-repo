@@ -6,7 +6,7 @@
 		"pipelines": [
 			{
 				"pipelineReference": {
-					"referenceName": "pl_data_flow_er",
+					"referenceName": "pl_data_flow_er_git_test",
 					"type": "PipelineReference"
 				}
 			}
