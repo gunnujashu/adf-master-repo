@@ -1,0 +1,321 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"type": "string",
+			"metadata": "Data Factory name",
+			"defaultValue": "dev-data-fac-jaswanth"
+		},
+		"AzureSqlDatabase1_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'AzureSqlDatabase1'"
+		},
+		"ls_aqi_air_quality_csv_all_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'ls_aqi_air_quality_csv_all'"
+		},
+		"ls_ds_aqi_allcsv_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'ls_ds_aqi_allcsv'"
+		},
+		"ls_src_aqi_air_quality_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'ls_src_aqi_air_quality'"
+		},
+		"ls_src_aqi_al_if_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'ls_src_aqi_al_if'"
+		},
+		"ls_src_aqi_all_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'ls_src_aqi_all'"
+		},
+		"ls_src_aqi_case_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'ls_src_aqi_case'"
+		},
+		"ls_src_emp_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'ls_src_emp'"
+		},
+		"ls_src_job_history_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'ls_src_job_history'"
+		},
+		"ls_trg_aqi_air_quality_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'ls_trg_aqi_air_quality'"
+		},
+		"ls_trg_aqi_all_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'ls_trg_aqi_all'"
+		},
+		"ls_trg_aqi_case_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'ls_trg_aqi_case'"
+		},
+		"ls_trg_aqui_all_if_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'ls_trg_aqui_all_if'"
+		},
+		"ls_trg_db_aqi_all_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'ls_trg_db_aqi_all'"
+		},
+		"ls_trg_emp_history_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'ls_trg_emp_history'"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "database-server-jaswanth.database.windows.net"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "database-dev-jaswanth"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "Jaswanthg"
+		},
+		"ls_aqi_air_quality_csv_all_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://storagedev1jaswanth.dfs.core.windows.net/"
+		},
+		"ls_ds_aqi_allcsv_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://storagedev1jaswanth.dfs.core.windows.net/"
+		},
+		"ls_src_aqi_air_quality_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://storagedev1jaswanth.dfs.core.windows.net/"
+		},
+		"ls_src_aqi_al_if_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://storagedev1jaswanth.dfs.core.windows.net/"
+		},
+		"ls_src_aqi_all_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://storagedev1jaswanth.dfs.core.windows.net/"
+		},
+		"ls_src_aqi_case_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://storagedev1jaswanth.dfs.core.windows.net/"
+		},
+		"ls_src_emp_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://storagedev1jaswanth.dfs.core.windows.net/"
+		},
+		"ls_src_job_history_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://storagedev1jaswanth.dfs.core.windows.net/"
+		},
+		"ls_trg_aqi_air_quality_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://storagedev1jaswanth.dfs.core.windows.net/"
+		},
+		"ls_trg_aqi_all_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://storagedev1jaswanth.dfs.core.windows.net/"
+		},
+		"ls_trg_aqi_case_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://storagedev1jaswanth.dfs.core.windows.net/"
+		},
+		"ls_trg_aqui_all_if_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://storagedev1jaswanth.dfs.core.windows.net/"
+		},
+		"ls_trg_db_aqi_all_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://storagedev1jaswanth.dfs.core.windows.net/"
+		},
+		"ls_trg_emp_history_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://storagedev1jaswanth.dfs.core.windows.net/"
+		},
+		"tg_switch_case_properties_pl_switch_case_parameters_InputFile": {
+			"type": "string",
+			"defaultValue": "Air_Quality.csv"
+		},
+		"tg_switch_case_properties_pl_switch_case_parameters_OutputFolder1": {
+			"type": "string",
+			"defaultValue": "f1"
+		},
+		"tg_switch_case_properties_pl_switch_case_parameters_OutputFolder2": {
+			"type": "string",
+			"defaultValue": "f2"
+		},
+		"tg_switch_case_properties_pl_switch_case_parameters_OutputFolder3": {
+			"type": "string",
+			"defaultValue": "f3"
+		},
+		"tg_switch_case_properties_pl_switch_case_parameters_RootSelection": {
+			"type": "string",
+			"defaultValue": "f1"
+		},
+		"containerUri": {
+			"type": "string",
+			"metadata": "URI to storage account containing linked ARM templates"
+		},
+		"containerSasToken": {
+			"type": "string",
+			"metadata": "Sas token to storage account containing linked ARM templates"
+		}
+	},
+	"variables": {
+		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+	},
+	"resources": [
+		{
+			"name": "dev-data-fac-jaswanth_ArmTemplate_0",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2024-03-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_0.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"AzureSqlDatabase1_password": {
+						"value": "[parameters('AzureSqlDatabase1_password')]"
+					},
+					"ls_aqi_air_quality_csv_all_accountKey": {
+						"value": "[parameters('ls_aqi_air_quality_csv_all_accountKey')]"
+					},
+					"ls_ds_aqi_allcsv_accountKey": {
+						"value": "[parameters('ls_ds_aqi_allcsv_accountKey')]"
+					},
+					"ls_src_aqi_air_quality_accountKey": {
+						"value": "[parameters('ls_src_aqi_air_quality_accountKey')]"
+					},
+					"ls_src_aqi_al_if_accountKey": {
+						"value": "[parameters('ls_src_aqi_al_if_accountKey')]"
+					},
+					"ls_src_aqi_all_accountKey": {
+						"value": "[parameters('ls_src_aqi_all_accountKey')]"
+					},
+					"ls_src_aqi_case_accountKey": {
+						"value": "[parameters('ls_src_aqi_case_accountKey')]"
+					},
+					"ls_src_emp_accountKey": {
+						"value": "[parameters('ls_src_emp_accountKey')]"
+					},
+					"ls_src_job_history_accountKey": {
+						"value": "[parameters('ls_src_job_history_accountKey')]"
+					},
+					"ls_trg_aqi_air_quality_accountKey": {
+						"value": "[parameters('ls_trg_aqi_air_quality_accountKey')]"
+					},
+					"ls_trg_aqi_all_accountKey": {
+						"value": "[parameters('ls_trg_aqi_all_accountKey')]"
+					},
+					"ls_trg_aqi_case_accountKey": {
+						"value": "[parameters('ls_trg_aqi_case_accountKey')]"
+					},
+					"ls_trg_aqui_all_if_accountKey": {
+						"value": "[parameters('ls_trg_aqui_all_if_accountKey')]"
+					},
+					"ls_trg_db_aqi_all_accountKey": {
+						"value": "[parameters('ls_trg_db_aqi_all_accountKey')]"
+					},
+					"ls_trg_emp_history_accountKey": {
+						"value": "[parameters('ls_trg_emp_history_accountKey')]"
+					},
+					"AzureSqlDatabase1_properties_typeProperties_server": {
+						"value": "[parameters('AzureSqlDatabase1_properties_typeProperties_server')]"
+					},
+					"AzureSqlDatabase1_properties_typeProperties_database": {
+						"value": "[parameters('AzureSqlDatabase1_properties_typeProperties_database')]"
+					},
+					"AzureSqlDatabase1_properties_typeProperties_userName": {
+						"value": "[parameters('AzureSqlDatabase1_properties_typeProperties_userName')]"
+					},
+					"ls_aqi_air_quality_csv_all_properties_typeProperties_url": {
+						"value": "[parameters('ls_aqi_air_quality_csv_all_properties_typeProperties_url')]"
+					},
+					"ls_ds_aqi_allcsv_properties_typeProperties_url": {
+						"value": "[parameters('ls_ds_aqi_allcsv_properties_typeProperties_url')]"
+					},
+					"ls_src_aqi_air_quality_properties_typeProperties_url": {
+						"value": "[parameters('ls_src_aqi_air_quality_properties_typeProperties_url')]"
+					},
+					"ls_src_aqi_al_if_properties_typeProperties_url": {
+						"value": "[parameters('ls_src_aqi_al_if_properties_typeProperties_url')]"
+					},
+					"ls_src_aqi_all_properties_typeProperties_url": {
+						"value": "[parameters('ls_src_aqi_all_properties_typeProperties_url')]"
+					},
+					"ls_src_aqi_case_properties_typeProperties_url": {
+						"value": "[parameters('ls_src_aqi_case_properties_typeProperties_url')]"
+					},
+					"ls_src_emp_properties_typeProperties_url": {
+						"value": "[parameters('ls_src_emp_properties_typeProperties_url')]"
+					},
+					"ls_src_job_history_properties_typeProperties_url": {
+						"value": "[parameters('ls_src_job_history_properties_typeProperties_url')]"
+					},
+					"ls_trg_aqi_air_quality_properties_typeProperties_url": {
+						"value": "[parameters('ls_trg_aqi_air_quality_properties_typeProperties_url')]"
+					},
+					"ls_trg_aqi_all_properties_typeProperties_url": {
+						"value": "[parameters('ls_trg_aqi_all_properties_typeProperties_url')]"
+					},
+					"ls_trg_aqi_case_properties_typeProperties_url": {
+						"value": "[parameters('ls_trg_aqi_case_properties_typeProperties_url')]"
+					},
+					"ls_trg_aqui_all_if_properties_typeProperties_url": {
+						"value": "[parameters('ls_trg_aqui_all_if_properties_typeProperties_url')]"
+					},
+					"ls_trg_db_aqi_all_properties_typeProperties_url": {
+						"value": "[parameters('ls_trg_db_aqi_all_properties_typeProperties_url')]"
+					},
+					"ls_trg_emp_history_properties_typeProperties_url": {
+						"value": "[parameters('ls_trg_emp_history_properties_typeProperties_url')]"
+					}
+				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "dev-data-fac-jaswanth_ArmTemplate_1",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2024-03-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_1.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"tg_switch_case_properties_pl_switch_case_parameters_InputFile": {
+						"value": "[parameters('tg_switch_case_properties_pl_switch_case_parameters_InputFile')]"
+					},
+					"tg_switch_case_properties_pl_switch_case_parameters_OutputFolder1": {
+						"value": "[parameters('tg_switch_case_properties_pl_switch_case_parameters_OutputFolder1')]"
+					},
+					"tg_switch_case_properties_pl_switch_case_parameters_OutputFolder2": {
+						"value": "[parameters('tg_switch_case_properties_pl_switch_case_parameters_OutputFolder2')]"
+					},
+					"tg_switch_case_properties_pl_switch_case_parameters_OutputFolder3": {
+						"value": "[parameters('tg_switch_case_properties_pl_switch_case_parameters_OutputFolder3')]"
+					},
+					"tg_switch_case_properties_pl_switch_case_parameters_RootSelection": {
+						"value": "[parameters('tg_switch_case_properties_pl_switch_case_parameters_RootSelection')]"
+					}
+				}
+			},
+			"dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'dev-data-fac-jaswanth_ArmTemplate_0')]"
+			]
+		}
+	]
+}

@@ -1,0 +1,120 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "dev-data-fac-jaswanth"
+		},
+		"AzureSqlDatabase1_password": {
+			"value": ""
+		},
+		"ls_aqi_air_quality_csv_all_accountKey": {
+			"value": ""
+		},
+		"ls_ds_aqi_allcsv_accountKey": {
+			"value": ""
+		},
+		"ls_src_aqi_air_quality_accountKey": {
+			"value": ""
+		},
+		"ls_src_aqi_al_if_accountKey": {
+			"value": ""
+		},
+		"ls_src_aqi_all_accountKey": {
+			"value": ""
+		},
+		"ls_src_aqi_case_accountKey": {
+			"value": ""
+		},
+		"ls_src_emp_accountKey": {
+			"value": ""
+		},
+		"ls_src_job_history_accountKey": {
+			"value": ""
+		},
+		"ls_trg_aqi_air_quality_accountKey": {
+			"value": ""
+		},
+		"ls_trg_aqi_all_accountKey": {
+			"value": ""
+		},
+		"ls_trg_aqi_case_accountKey": {
+			"value": ""
+		},
+		"ls_trg_aqui_all_if_accountKey": {
+			"value": ""
+		},
+		"ls_trg_db_aqi_all_accountKey": {
+			"value": ""
+		},
+		"ls_trg_emp_history_accountKey": {
+			"value": ""
+		},
+		"AzureSqlDatabase1_properties_typeProperties_server": {
+			"value": "database-server-jaswanth.database.windows.net"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_database": {
+			"value": "database-dev-jaswanth"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_userName": {
+			"value": "Jaswanthg"
+		},
+		"ls_aqi_air_quality_csv_all_properties_typeProperties_url": {
+			"value": "https://storagedev1jaswanth.dfs.core.windows.net/"
+		},
+		"ls_ds_aqi_allcsv_properties_typeProperties_url": {
+			"value": "https://storagedev1jaswanth.dfs.core.windows.net/"
+		},
+		"ls_src_aqi_air_quality_properties_typeProperties_url": {
+			"value": "https://storagedev1jaswanth.dfs.core.windows.net/"
+		},
+		"ls_src_aqi_al_if_properties_typeProperties_url": {
+			"value": "https://storagedev1jaswanth.dfs.core.windows.net/"
+		},
+		"ls_src_aqi_all_properties_typeProperties_url": {
+			"value": "https://storagedev1jaswanth.dfs.core.windows.net/"
+		},
+		"ls_src_aqi_case_properties_typeProperties_url": {
+			"value": "https://storagedev1jaswanth.dfs.core.windows.net/"
+		},
+		"ls_src_emp_properties_typeProperties_url": {
+			"value": "https://storagedev1jaswanth.dfs.core.windows.net/"
+		},
+		"ls_src_job_history_properties_typeProperties_url": {
+			"value": "https://storagedev1jaswanth.dfs.core.windows.net/"
+		},
+		"ls_trg_aqi_air_quality_properties_typeProperties_url": {
+			"value": "https://storagedev1jaswanth.dfs.core.windows.net/"
+		},
+		"ls_trg_aqi_all_properties_typeProperties_url": {
+			"value": "https://storagedev1jaswanth.dfs.core.windows.net/"
+		},
+		"ls_trg_aqi_case_properties_typeProperties_url": {
+			"value": "https://storagedev1jaswanth.dfs.core.windows.net/"
+		},
+		"ls_trg_aqui_all_if_properties_typeProperties_url": {
+			"value": "https://storagedev1jaswanth.dfs.core.windows.net/"
+		},
+		"ls_trg_db_aqi_all_properties_typeProperties_url": {
+			"value": "https://storagedev1jaswanth.dfs.core.windows.net/"
+		},
+		"ls_trg_emp_history_properties_typeProperties_url": {
+			"value": "https://storagedev1jaswanth.dfs.core.windows.net/"
+		},
+		"tg_switch_case_properties_pl_switch_case_parameters_InputFile": {
+			"value": "Air_Quality.csv"
+		},
+		"tg_switch_case_properties_pl_switch_case_parameters_OutputFolder1": {
+			"value": "f1"
+		},
+		"tg_switch_case_properties_pl_switch_case_parameters_OutputFolder2": {
+			"value": "f2"
+		},
+		"tg_switch_case_properties_pl_switch_case_parameters_OutputFolder3": {
+			"value": "f3"
+		},
+		"tg_switch_case_properties_pl_switch_case_parameters_RootSelection": {
+			"value": "f1"
+		}
+	}
+}
