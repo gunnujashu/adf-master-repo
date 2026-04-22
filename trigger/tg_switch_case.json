@@ -1,0 +1,32 @@
+{
+	"name": "tg_switch_case",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "pl_switch_case",
+					"type": "PipelineReference"
+				},
+				"parameters": {
+					"InputFile": "Air_Quality.csv",
+					"OutputFolder1": "f1",
+					"OutputFolder2": "f2",
+					"OutputFolder3": "f3",
+					"RootSelection": "f1"
+				}
+			}
+		],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Minute",
+				"interval": 5,
+				"startTime": "2026-04-22T08:51:00",
+				"endTime": "2026-04-23T08:51:00",
+				"timeZone": "India Standard Time"
+			}
+		}
+	}
+}

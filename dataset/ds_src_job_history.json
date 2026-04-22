@@ -1,0 +1,49 @@
+{
+	"name": "ds_src_job_history",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_src_job_history",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "src_aqi/ds_src_emp"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "JOB_HISTORY.csv",
+				"folderPath": "employee-datasets",
+				"fileSystem": "bronze"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "EMPLOYEE_ID",
+				"type": "String"
+			},
+			{
+				"name": "START_DATE",
+				"type": "String"
+			},
+			{
+				"name": "END_DATE",
+				"type": "String"
+			},
+			{
+				"name": "JOB_ID",
+				"type": "String"
+			},
+			{
+				"name": "DEPARTMENT_ID",
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

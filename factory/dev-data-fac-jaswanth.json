@@ -1,0 +1,9 @@
+{
+	"name": "dev-data-fac-jaswanth",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "36dfa54f-3b95-4ae1-affb-12baa31e7bfc",
+		"tenantId": "644ec66b-e706-49ca-8d4d-7d3d15e5c0aa"
+	}
+}

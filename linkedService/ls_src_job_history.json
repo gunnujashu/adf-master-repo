@@ -1,0 +1,12 @@
+{
+	"name": "ls_src_job_history",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "AzureBlobFS",
+		"typeProperties": {
+			"url": "https://storagedev1jaswanth.dfs.core.windows.net/",
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JZQEQ4NDg0NkIxLTY4QTMtNDk5OC1BRDMxLTJFQTY2QjAwNTU2Rl9kOTZkMzYxYy05N2MxLTQzZmQtYTYyNy00YjE2MmNjMmRiMmIiDQp9"
+		}
+	}
+}

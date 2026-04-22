@@ -1,0 +1,25 @@
+{
+	"name": "tg_data_flow_er",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "pl_data_flow_er",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Minute",
+				"interval": 10,
+				"startTime": "2026-04-22T09:08:00",
+				"endTime": "2026-04-23T09:08:00",
+				"timeZone": "India Standard Time"
+			}
+		}
+	}
+}

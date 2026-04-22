@@ -1,0 +1,27 @@
+{
+	"name": "ds_trg_emp_history",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_trg_emp_history",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "trg_aqi/ds_trg_emp"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": "Data_Flow",
+				"fileSystem": "silver"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
